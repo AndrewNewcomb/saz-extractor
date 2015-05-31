@@ -8,6 +8,7 @@ Consider securing the output files as if the sessions contain sensitive data, su
 
 #Usage
 sazExtractor inputSazFile
+
 sazExtractor inputSazFile /o outputFolder /r jsonRulesFile
 
 Where:
