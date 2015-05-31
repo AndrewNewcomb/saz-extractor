@@ -1,0 +1,15 @@
+﻿[
+	{
+		"appliesTo":[".*"],
+		"replaces":[
+		  { "f":"https?://[^/]+/", "t":"REMOVED/"},
+		  { "f":"bld=%27[0-9a-z.]+%27", "t":"bld=REMOVED"}
+		]
+	},
+	{
+		"appliesTo":["^GET"],
+		"replaces":[
+		  { "f":"^.*(var options.*\\}\\};).*$", "t":"$1"}
+		]
+	}
+]
