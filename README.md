@@ -1,4 +1,4 @@
-#Purpose
+# Purpose
 I wanted to compare web site requests from a development site with those from the corresponding live site to check for any differences. I used Fiddler2 to capture session traces from both sites but found that there was a lot of noise in each file, such as build versions, cache buster values, and http header differences. The code in this project takes a .saz file, extracts each request/response pair from it, applies a series of regular expressions, and saves the resulting files. A file comparison tool such as WinMerge can then be used to compare the files with a set of reference files, highlighting any differences.
 
 The code won't deal with compressed output, so before saving the fiddler sessions expand any gzipped responses via the Fiddler menu option `Rules`, `Remove All Encodings`.
@@ -6,7 +6,7 @@ The code won't deal with compressed output, so before saving the fiddler session
 The code won't yet deal with an encrypted .saz file.
 Consider securing the output files as if the sessions contain sensitive data, such as cookies, or personally identifiable information then the data will appear in the output files (unless removed by a regex). 
 
-#Usage
+# Usage
 sazExtractor inputSazFile
 
 sazExtractor inputSazFile /o outputFolder /r jsonRulesFile
